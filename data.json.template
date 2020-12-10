@@ -1,0 +1,5 @@
+{
+    "email": "aaa@bbb.com",
+    "api_key": "your_mailchimp_api_key",
+    "api_secret": "your_mailchimp_api_secret"
+}
