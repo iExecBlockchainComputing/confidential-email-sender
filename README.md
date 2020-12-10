@@ -1,7 +1,6 @@
 # iexec-private-data-app
 
-Manage emailing without access to the email address
-
+Manage emailing with no access to the email address of the receiver.
 
 ## Prerequisites
 
