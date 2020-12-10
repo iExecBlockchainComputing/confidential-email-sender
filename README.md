@@ -7,11 +7,11 @@ Manage emailing without access to the email address
 
  * iExec installation
  * good iExec infrastructure understanding
- * need a Mailjet account, this app can be easily update to support other email service provider.
+ * need a Mailjet account, this app can be easily modified to support other email service provider.
 
 ## Build
 
-Dataset filename is data.json, hard coded.
+The Dataset filename is data.json, and it is hard coded.
 
 ```
 sh build.sh
@@ -19,7 +19,7 @@ sh build.sh
 
 ## Run the app locally
 
-Create dataset locally
+Create dataset file in root 
 
 ### **`data.json`**
 ```
@@ -38,7 +38,6 @@ sh test.sh
 
 ## App run script
 
-You can configure the chain inside
 
 ### **apprun.sh**
 ```
