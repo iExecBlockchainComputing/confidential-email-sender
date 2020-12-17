@@ -24,8 +24,8 @@ Create dataset file in root
 ```
 {
     "email": "aaa@bbb.com",
-    "api_key": "your_mailchimp_api_key",
-    "api_secret": "your_mailchimp_api_secret"
+    "api_key": "your_mailjet_api_key",
+    "api_secret": "your_mailjet_api_secret"
 }
 ```
 
