@@ -12,20 +12,23 @@ if os.path.exists(iexec_in + '/data.json'):
         secret = json.load(json_file)
 
 mailjet = Client(auth=(secret["api_key"], secret["api_secret"]), version='v3.1')
+
+htmlPart = open("/app/content.html", "r").read()
+
 data = {
   'Messages': [
     {
       "From": {
-        "Email": "er@iex.ec",
-        "Name": "iExec demo sender"
+        "Email": "confidential-email-sender-app@iex.ec",
+        "Name": "Confidential Email Sender"
       },
       "To": [
         {
           "Email": secret["email"] ,
         }
       ],
-      "Subject": "iExec Demo: emailing service with secret email address",
-      "HTMLPart": "</p>You receive this email from a service you suscribed, without exposing your email address to this sender, </p> <p> This is a world premiere! </p> <p> iExec Academy – All iExec content in one place. <A href=\"http://academy.iex.ec\"> iExec Academy</A> </p>",
+      "Subject": "👀 Hey there, it’s iExec!",
+      "HTMLPart": htmlPart,
       "CustomID": "AppGettingStartedTest"
     }
   ]

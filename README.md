@@ -1,4 +1,4 @@
-# iexec-private-data-app
+# Confidential Email Sender App
 
 Manage emailing with no access to the email address of the receiver.
 
@@ -13,44 +13,35 @@ Manage emailing with no access to the email address of the receiver.
 The Dataset filename is data.json, and it is hard coded.
 
 ```
-sh build.sh
+.build
 ```
 
 ## Run the app locally
 
-Create dataset file in root 
+Create dataset file in private-data/
 
 ### **`data.json`**
 ```
 {
-    "email": "aaa@bbb.com",
-    "api_key": "your_mailchimp_api_key",
-    "api_secret": "your_mailchimp_api_secret"
+    "email": "alice@domain.com",
+    "api_key": "your_mailjet_api_key",
+    "api_secret": "your_mailjet_api_secret"
 }
 ```
 
-Test the app (the python code) locally
+Test the app locally
 
 ```
-sh test.sh
+./run
 ```
 
 ## App run script
 
 
 ### **apprun.sh**
-```
-iexec app run 0xDBD384377BEc6d29aDf0184a68dfFd1f4d0b50BF \
-      --chain goerli \
-      --wallet-file user_wallet \
-      --dataset 0x74A62D3A031FB2511F4F6fe6cB2ddaa0DA82b529 \
-      --workerpool 0xEb6c3FA8522f2C342E94941C21d3947c099e6Da0 \
-      --tag 0x0000000000000000000000000000000000000000000000000000000000000001 \
-      --force \
-      --watch
-```
 
+First encrypt data.json, deploy dataset and push dataset secret then
 
 ```
-./apprun.sh
+./iexec-run
 ```

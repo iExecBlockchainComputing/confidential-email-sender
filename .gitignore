@@ -7,3 +7,4 @@ orders.json
 package-lock.json
 datasets
 dataset.py
+private-data/data.json
