@@ -8,14 +8,18 @@ IMG_NAME="private-data-email-app"
 IMG_FROM=${IMG_NAME}:temp-non-tee
 IMG_TO=${IMG_NAME}:tee-debug
 
+SCONE_IMAGE="registry.scontain.com:5050/scone-production/iexec-sconify-image:5.3.11"
+
 # build the regular non-TEE image
 docker build . -t ${IMG_FROM}
 
 # run the sconifier to build the TEE image based on the non-TEE image
 docker run -it \
             -v /var/run/docker.sock:/var/run/docker.sock \
-            registry.scontain.com:5050/scone-production/iexec-sconify-image:5.3.9 \
+            ${SCONE_IMAGE} \
             sconify_iexec \
+            --cli=${SCONE_IMAGE} \
+            --crosscompiler=${SCONE_IMAGE} \
             --name=${IMG_NAME} \
             --from=${IMG_FROM} \
             --to=${IMG_TO} \
