@@ -6,8 +6,8 @@
 --host-path=/etc/hosts \
 --host-path=/etc/resolv.conf \
 --binary=/usr/local/bin/python3.7 \
---heap="4G" \
+--heap="1G" \
 --dlopen="2" \
 --verbose \
 --no-color \
---command="java -jar /app/app.jar"
+--command="python3 /app/app.py"

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # declare the app entrypoint
-ENTRYPOINT="python /app/app.py"
+ENTRYPOINT="python3 /app/app.py"
 # declare an image name
 IMG_NAME="private-data-email-app"
 
