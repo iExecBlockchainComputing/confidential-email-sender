@@ -5,7 +5,7 @@
 --fs-dir=/app \
 --host-path=/etc/hosts \
 --host-path=/etc/resolv.conf \
---binary=/usr/lib/jvm/java-11-openjdk/bin/java \
+--binary=/usr/local/bin/python3.7 \
 --heap="4G" \
 --dlopen="2" \
 --verbose \
