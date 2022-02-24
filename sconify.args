@@ -1,4 +1,4 @@
---name=tee-pre-compute \
+--name=confidential-email-sender \
 --from=${IMG_FROM} \
 --to=${IMG_TO} \
 --binary-fs \
@@ -6,8 +6,8 @@
 --host-path=/etc/hosts \
 --host-path=/etc/resolv.conf \
 --binary=/usr/local/bin/python3.7 \
---heap="1G" \
---dlopen="2" \
+--heap=1G \
+--dlopen=2 \
 --verbose \
 --no-color \
 --command="python3 /app/app.py"
