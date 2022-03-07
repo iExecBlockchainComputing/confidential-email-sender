@@ -2,6 +2,6 @@
 @Library('global-jenkins-library@1.6.1') _
 
 def nativeImage = buildSimpleDocker_v2(dockerfileDir: '.', buildContext: '.',
-        dockerImageRepositoryName: 'private-data-email-app', imageprivacy: 'public')
-sconeBuildAllTee(nativeImage: nativeImage, targetImageRepositoryName: 'private-data-email-app',
+        dockerImageRepositoryName: 'confidential-email-sender', imageprivacy: 'public')
+sconeBuildAllTee(nativeImage: nativeImage, targetImageRepositoryName: 'confidential-email-sender',
         sconifyArgsPath: 'sconify.args')
