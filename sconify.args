@@ -5,7 +5,7 @@
 --fs-dir=/app \
 --host-path=/etc/hosts \
 --host-path=/etc/resolv.conf \
---binary=/usr/local/bin/python3.7 \
+--binary=/usr/local/bin/python3.9 \
 --heap=1G \
 --dlopen=2 \
 --verbose \
