@@ -9,4 +9,4 @@ RUN SCONE_MOD=sim pip3 install -r requirements.txt
 # copy app
 COPY ./src /app
 
-ENTRYPOINT [ "python3", "/app/run.py" ]
+ENTRYPOINT [ "python3", "/app/app.py" ]
