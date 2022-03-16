@@ -1,12 +1,17 @@
 #!/bin/bash
 
+<< 'USAGE'
+SCONIFIER_VERSION=x.y.z \
+./sconify.sh
+USAGE
+
 # declare an image name
 IMG_NAME="confidential-email-sender"
 
 IMG_FROM=${IMG_NAME}:temp-non-tee
 IMG_TO=${IMG_NAME}:tee-debug
 
-SCONE_IMAGE="registry.scontain.com:5050/scone-production/iexec-sconify-image:5.3.11"
+SCONE_IMAGE="registry.scontain.com:5050/scone-production/iexec-sconify-image:${SCONIFIER_VERSION:-5.3.12}"
 
 ARGS=$(sed \
   -e "s'\${IMG_FROM}'${IMG_FROM}'" \
