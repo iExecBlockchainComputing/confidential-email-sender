@@ -1,9 +1,0 @@
-#!/bin/sh
-iexec app run 0x43ff15e772896e3F7e0cB740ca8dC8E04f4dAA33 \
-      --chain bellecour \
-      --wallet-file <user_wallet> \
-      --dataset <deployed_dataset_with_data.json> \
-      --workerpool 0x13EE8c43Abd7dFAcfa4C42554Dff72d9fbcF3330 \
-      --tag tee \
-      --force \
-      --watch
