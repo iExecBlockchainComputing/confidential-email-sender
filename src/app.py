@@ -10,11 +10,9 @@ dataset_filename = os.environ['IEXEC_DATASET_FILENAME']
 dataset_path = iexec_in + '/' + dataset_filename
 
 result = {"status_code": 0}
-dataset_exists = False
 
 # Eventually use some confidential assets
 if os.path.exists(dataset_path):
-    dataset_exists = True
     with open(dataset_path, 'r') as json_file:
         secret = json.load(json_file)
 
@@ -49,7 +47,7 @@ with open(iexec_out + '/computed.json', 'w+') as f:
 print ("debug :" + str(result.json()))
 
 with open(iexec_out + '/result.txt', 'w+') as f:
-    if not dataset_exists or not str(result.status_code) == "200":
+    if not str(result.status_code) == "200":
         f.write("email send failed ")
 
     else:
