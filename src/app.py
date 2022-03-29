@@ -49,7 +49,7 @@ with open(iexec_out + '/computed.json', 'w+') as f:
 print ("debug :" + str(result.json()))
 
 with open(iexec_out + '/result.txt', 'w+') as f:
-    if no dataset_exists or not str(result.status_code) == "200":
+    if not dataset_exists or not str(result.status_code) == "200":
         f.write("email send failed ")
 
     else:
