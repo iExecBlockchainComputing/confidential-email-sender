@@ -47,8 +47,8 @@ with open(iexec_out + '/computed.json', 'w+') as f:
 print ("debug :" + str(result.json()))
 
 with open(iexec_out + '/result.txt', 'w+') as f:
-    if not str(result.status_code) == "200":
-        f.write("email send failed ")
+    if str(result.status_code) == "200":
+        f.write("email send successfully")
 
     else:
-        f.write("email send successfully")
+        f.write("email send failed ")
