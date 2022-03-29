@@ -9,7 +9,7 @@ dataset_filename = os.environ['IEXEC_DATASET_FILENAME']
 
 dataset_path = iexec_in + '/' + dataset_filename
 
-result = {status_code: 0}
+result = {"status_code": 0}
 dataset_exists = False
 
 # Eventually use some confidential assets
